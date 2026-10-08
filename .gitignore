@@ -1,0 +1,28 @@
+# bundled Blender build and downloaded CC0 assets (fetch_models.py re-downloads models)
+blender/
+assets/*
+!assets/LICENCES.md
+!assets/models/
+assets/models/*
+!assets/models/manifest.json
+# renders, media, logs
+out/
+**/renders/
+**/stills/
+**/work/
+**/final/
+**/audio/
+**/logs/
+*.mp4
+*.wav
+*.mp3
+*.png
+*.blend1
+# python
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+# scraped reference-channel data (other people's channels)
+study/raw/
+study/*.jsonl

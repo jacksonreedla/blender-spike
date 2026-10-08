@@ -1,0 +1,214 @@
+{
+ "slug": "graves-that-wore-iron",
+ "title": "The Graves That Wore Iron",
+ "topic": "Why grave robbing in Georgian England was barely a crime, what families and parishes locked over their graves because of it, and how the law of eighteen thirty two ended the trade by handing anatomists the bodies nobody claimed.",
+ "word_count": 68,
+ "beats": [
+  {
+   "label": "hook",
+   "act": 1,
+   "sentences": [
+    {
+     "text": "In Georgian England, stealing a corpse from a grave was barely a crime.",
+     "start_s": 0.0,
+     "end_s": 4.245,
+     "audio": "vo000.wav",
+     "speed": 1.0
+    }
+   ],
+   "shot": {
+    "id": "shot_01",
+    "description": "A tall wrought-iron churchyard gate stands closed in fog on wet cobbles, rimmed warm from behind-left by a gas lamp and raked cold from behind-right, as the camera creeps in from low and rises.",
+    "subject": "place(\"large_iron_gate\", at=(0.0, 0.0)) - closed, 2.93 m tall, 2.95 m wide, centred in frame. This is the only shot in the film that uses the gate as its subject.",
+    "environment": [
+     "lamp(at=(-2.3, 3.2), toward=(0.0, 0.4), energy=1800, color=(1.0, 0.72, 0.42)) - street_lamp_01 standing 3.9 m behind-left of the gate. The helper puts the POINT bulb at z 3.15, offset 0.5 m out of the housing toward the gate, so the mesh does not shadow its own light. Never put a bare POINT at a lamp head.",
+     "place(\"gothic_statue\", at=(2.4, 6.0), rot_deg=35) - a fogged monument silhouette behind-right. Measured 2.60 m off the view axis at 11.9 m depth against a 5.03 m half-width, so it is comfortably inside frame.",
+     "box(size=(7.0, 0.35, 1.9), at=(-2.5, 7.6), rot_deg=8, color=(0.085, 0.082, 0.078), rough=0.9) - churchyard wall, 7 m long, breaks the horizon behind everything so the upper frame is architecture and not void.",
+     "box(size=(1.9, 0.9, 0.7), at=(-2.2, 1.4), rot_deg=12, color=(0.16, 0.155, 0.148), rough=0.9) - a chest tomb as mass at the left frame edge. It sits 1.4 m BEHIND the gate, so it is never between camera and subject."
+    ],
+    "ground": "ground(size=80, texture=\"cobblestone_03\", scale=5.0, wet=0.7) - wet cobbles. The lamp reflection running down the lower third is what keeps this frame off the crushed-black gate in shotgen's numeric check.",
+    "lighting": "Key: the lamp() bulb behind-left, warm RGB (1.0, 0.72, 0.42) at 1800 W, about 3.9 m from the gate, so every bar carries a warm rim. Cross key: light(\"SPOT\", location=(3.0, 3.8, 3.8), at=(0.0, 0.0, 1.3), energy=2000, size=0.35, color=(0.80, 0.87, 1.0), spot_size=math.radians(50)) - cold moonlight from behind-RIGHT, 5.45 m from target, inside the measured 1500-4000 W at 3-6 m key band. The two opposed rims are what separate the ironwork from the wall. Fill: light(\"AREA\", location=(2.6, -3.2, 1.9), at=(0.0, 0.0, 1.3), energy=110, size=2.0, color=(0.60, 0.70, 1.0)) - about six percent of key, on the camera side of the gate face. World: world(color=(0.012, 0.014, 0.022), strength=0.45, fog=0.016, anisotropy=0.45). No HDRI.",
+    "camera": "camera(location=(0.20, -6.00, 0.70), at=(0.0, 0.0, 1.40), lens=24) moving to location=(-0.05, -5.10, 1.08) on the same aim. Slow push-in with a slight rise, 1.01 m of travel; distance 6.0 m to 5.1 m; gate 32 to 38 percent of frame height.",
+    "staging_notes": "Duration 4.9 s. THE THREE MECHANICAL TRAPS, all silent failures: (1) spot_size is passed straight to Blender and is RADIANS, clamped at pi - writing 50 gives a 180 degree flood and the cross key vanishes, so write math.radians(50). (2) light() and lamp() take an RGB tuple, not Kelvin; a colour left off inherits lamp()'s warm (1.0, 0.8, 0.55). (3) Render is 1080x1920 with sensor_fit AUTO, so the 36 mm sensor maps to the 1920 axis: vertical frame height at distance d is 36*d/lens and the horizontal HALF width is 10.125*d/lens. At 24 mm that is a generous 0.42*d, which is why this shot can afford dressing 2.2-2.6 m off axis. Keep every dressed item inside 0.8 of the half-width at its own depth. WHY 24 MM AND NOT 28: at 28 mm the gate only reaches 38 percent of frame height at 6.0 m and 33 percent at 6.9 m, which pushes the camera past the 3-6 m rule; 24 mm holds the same framing at 5.1-6.0 m. Do not let the push run past 5.1 m - at 4.8 m the gate breaks the 40 percent ceiling. The camera aims at (0,0,1.40), a point on the gate itself, so check_sightline's hit lands inside its 0.6 m tolerance and the guard passes. There is NO night HDRI in this library (only assets/studio.hdr, a bright studio probe, and a flat 121212) - use the flat dark world colour above. World strength must stay at or above 0.3 or the fog has nothing to scatter and the shadows go pure black."
+   },
+   "start_s": 0.0,
+   "end_s": 4.245
+  },
+  {
+   "label": "context",
+   "act": 1,
+   "sentences": [
+    {
+     "text": "A body belonged to no one, so taking it was not theft.",
+     "start_s": 5.045,
+     "end_s": 8.48,
+     "audio": "vo001.wav",
+     "speed": 1.0
+    }
+   ],
+   "shot": {
+    "id": "shot_02",
+    "description": "A crowned stone monument stands over turned earth with its grave slab dragged aside into the mud, and the camera tracks left so parallax opens a gap between the monument and the robbed plot.",
+    "subject": "place(\"gothic_statue\", at=(0.0, 0.0), rot_deg=15) - 1.74 m, reading as the grave monument above a disturbed plot. Keep it at this distance and in fog: the model is crowned and chain-draped, closer to a fantasy monument than a churchyard angel, and it only reads as Georgian statuary at 5 m in haze. Never bring it into close foreground.",
+    "environment": [
+     "box(size=(2.0, 0.9, 0.18), at=(-1.05, -0.45), rot_deg=24, color=(0.17, 0.165, 0.155), rough=0.9) - the displaced grave slab, lying skewed in the turned earth to the left of the monument. It is the narrative object of the shot.",
+     "box(size=(1.9, 0.9, 0.75), at=(1.4, 3.8), rot_deg=6, color=(0.16, 0.155, 0.148), rough=0.9) - a second, intact chest tomb behind-right. It sweeps from 2.03 m to 1.05 m off axis across the track, which is the parallax.",
+     "box(size=(6.0, 0.3, 1.5), at=(-1.8, 5.2), rot_deg=5, color=(0.085, 0.082, 0.078), rough=0.9) - churchyard wall behind.",
+     "lamp(at=(-1.5, 6.2), toward=(-0.6, 2.0), energy=1700, color=(1.0, 0.74, 0.46)) - street_lamp_01 standing 1 m BEHIND the 1.5 m wall, so only its 3.87 m head and halo clear the wall. In frame at both ends of the track (0.57 m and 2.24 m off axis).",
+     "place(\"dead_tree_trunk\", at=(1.15, 1.1), rot_deg=70) - a fallen trunk lying flat, 0.29 m tall, filling the lower right. Pulled in from 3.4 m, which was entirely outside a 35 mm portrait frame."
+    ],
+    "ground": "ground(size=80, texture=\"brown_mud_dry\", scale=3.0, wet=0.25) - cracked earth at a coarse tile so it reads as freshly turned soil rather than desert. The light damp is deliberate: it gives the key something to glint off in the lower frame without turning churchyard mud into a wet studio floor.",
+    "lighting": "Key: light(\"SPOT\", location=(-3.0, 3.6, 3.8), at=(0.0, 0.0, 1.25), energy=2200, size=0.4, color=(0.78, 0.86, 1.0), spot_size=math.radians(48)) - cold moonlight from behind-left at 5.34 m, so the monument is rim-lit and the opened ground stays half dark. Fill: light(\"AREA\", location=(2.8, -3.4, 1.6), at=(-0.3, 0.0, 0.6), energy=120, size=3.0, color=(1.0, 0.86, 0.72)) - warm, about ten percent, aimed low specifically to lift the displaced slab out of black. World: world(color=(0.012, 0.014, 0.020), strength=0.40, fog=0.014, anisotropy=0.4) - thinnest fog of the five so the disturbed ground stays legible.",
+    "camera": "camera(location=(0.45, -5.40, 1.05), at=(-0.15, -0.35, 1.20), lens=35) tracking laterally to location=(-0.85, -5.40, 1.05) on the same aim. Constant distance about 5.1 m, 1.30 m of travel; statue holds 33 percent of frame height throughout.",
+    "staging_notes": "Duration 4.5 s. THE LINE CHANGED AND THIS IS WHY: the earlier draft said the shroud was the greater crime, which is true and is the most quotable fact in the deck, but this library has no cloth - no shroud, no coffin, no grave clothes - so the voice would name an object the frame cannot show. The sentence now describes exactly what is on screen: a body taken, a grave left open, and no theft in law. Do not restore a cloth noun without a cloth asset. AIM POINT: the camera aims at (-0.15, -0.35, 1.20), a point on the statue's NEAR face, not its centre. Aiming at the centre puts the statue's own near surface about 0.60 m in front of the target, right on check_sightline's tolerance, and the render is refused. The displaced slab is 0.18 m tall and the camera-to-target ray passes 1.20 m above it, so the slab is legal where it is; if the guard ever fires, move the slab to (-1.25, -0.45) rather than lowering the camera. All dressing here was re-solved for the real portrait frame: at 35 mm the horizontal half-width is only 0.289*d, which is why the trunk moved from 3.4 m to 1.15 m off centre and the chest tomb from 2.7 m to 1.4 m."
+   },
+   "start_s": 5.045,
+   "end_s": 8.48
+  },
+  {
+   "label": "evidence",
+   "act": 2,
+   "sentences": [
+    {
+     "text": "A new grave was worth real money, because anatomy schools paid cash.",
+     "start_s": 9.28,
+     "end_s": 13.696,
+     "audio": "vo002.wav",
+     "speed": 1.03
+    }
+   ],
+   "shot": {
+    "id": "shot_03",
+    "description": "Low at the foot of a fresh grave: a rough uncarved stone stands at its head over a bare new slab in damp turned earth, hard cold light from the right rims the stone, a lamp halo deep behind, and the camera pushes in along the ground.",
+    "subject": "place(\"boulder_01\", at=(0.0, 0.0), rot_deg=20) - 1.0 m of rough brown granite standing at the head of the grave as a plain, cheap marker. A real textured model, chosen over a box marker on purpose: box() takes only a flat colour, and a hero box renders as an untextured grey block.",
+    "environment": [
+     "box(size=(2.0, 0.95, 0.16), at=(0.0, -0.95), rot_deg=6, color=(0.17, 0.165, 0.155), rough=0.9) - the new grave slab, lying toward camera in front of the stone. Dead centre of frame, 0.10 m off axis.",
+     "box(size=(1.8, 0.85, 0.65), at=(0.55, 3.2), rot_deg=12, color=(0.16, 0.155, 0.148), rough=0.9) - an older chest tomb behind-right.",
+     "place(\"gothic_statue\", at=(-2.4, 4.3), rot_deg=200) - the paid-for monument of a richer grave, behind-left in fog, deliberately NOT stacked behind the hero (1.15-1.45 m off axis).",
+     "box(size=(7.0, 0.35, 1.8), at=(-0.6, 7.4), rot_deg=10, color=(0.085, 0.082, 0.078), rough=0.9) - churchyard wall closing the background.",
+     "lamp(at=(-2.1, 6.4), toward=(-0.4, 2.2), energy=1700, color=(1.0, 0.74, 0.46)) - a warm halo just left of the axis at 11 m depth, the only warm note in the frame."
+    ],
+    "ground": "ground(size=80, texture=\"brown_mud_dry\", scale=2.5, wet=0.45) - rain-damp fresh earth. The wet pulls the lamp and the key into the bottom of frame; at wet=0 this low angle crushes the lower half to black.",
+    "lighting": "Key: light(\"SPOT\", location=(2.6, 2.6, 3.2), at=(0.0, 0.0, 0.6), energy=2400, size=0.35, color=(0.82, 0.88, 1.0), spot_size=math.radians(42)) - hard and cold from behind-right at 4.5 m, rimming the stone and raking across the cracked earth so the turned ground has texture. Fill: light(\"AREA\", location=(-2.4, -2.6, 1.5), at=(0.0, 0.0, 0.6), energy=90, size=2.5, color=(1.0, 0.84, 0.66)) - warm, motivated by the distant lamp, keeping the shadow side of the stone and the near mud off pure black. World: world(color=(0.012, 0.014, 0.020), strength=0.45, fog=0.020, anisotropy=0.45).",
+    "camera": "camera(location=(0.95, -4.35, 0.48), at=(0.0, -0.55, 0.60), lens=40) pushing to location=(0.60, -3.70, 0.70) on the same aim. Low slow push-in, 0.77 m of travel; distance 3.9 m to 3.2 m; stone grows from 28 to 35 percent of frame height.",
+    "staging_notes": "Duration 4.5 s. THIS BEAT REPLACES THE CASK SHOT, AND THE REASON IS MEASURED, NOT AESTHETIC. The earlier draft staged the money beat as casks of brine under a dock lamp using barrel_03. I parsed the asset off disk: its radius is a constant 0.303 to 0.311 m from base to lid with two raised rolling rings and no bilge at all, and its diffuse map averages RGB (69, 86, 110). barrel_03 is a blue-painted steel drum, not a wooden cask - the library's own one-line description of it as a wooden or iron barrel is wrong. A modern oil drum in a Georgian night scene is the kind of thing that gets screenshotted, so the cask claim went with it. Do not reintroduce barrel_03 anywhere in this film. The surviving claim (anatomy schools paid cash, and demand far outran the lawful supply) is the one the 1828 Select Committee on Anatomy actually evidences, and the frame now shows the thing being valued: a new grave. Do NOT upgrade 'paid cash' to a price figure unless quoting the committee. AIM POINT: aim at (0.0, -0.55, 0.60), on the stone's near upper face. boulder_01 is 1.83 m deep, so aiming at its centre puts its own near face 0.99 m in front of the target and check_sightline refuses the render. The grave slab is 0.16 m tall and the ray clears it at 0.68 m, so it is legal lying in front of the stone. At 40 mm the horizontal half-width is only 0.253*d - every item above was placed against that number, so do not drift anything sideways."
+   },
+   "start_s": 9.28,
+   "end_s": 13.696
+  },
+  {
+   "label": "reversal",
+   "act": 2,
+   "sentences": [
+    {
+     "text": "In Scotland, families and parishes locked iron cages over graves and watched them for weeks.",
+     "start_s": 14.496,
+     "end_s": 20.405,
+     "audio": "vo003.wav",
+     "speed": 1.03
+    }
+   ],
+   "shot": {
+    "id": "shot_04",
+    "description": "An iron cage stands locked around a grave slab in rain-soaked churchyard mud, a hard cold beam raking through the bars so their shadows stripe the slab and the ground toward the lens, while the camera rises off the ground.",
+    "subject": "A mortsafe built from ground-resting boxes, centred on the origin. Slab: box(size=(2.05, 0.95, 0.18), at=(0.0, 0.0), rot_deg=4, color=(0.155, 0.150, 0.142), rough=0.9). Cage: 24 upright bars, each box(size=(0.07, 0.07, 0.95), color=(0.022, 0.022, 0.026), rough=0.42) - nine along each long side at y=-0.58 and y=+0.58 with x at -1.04, -0.78, -0.52, -0.26, 0.0, 0.26, 0.52, 0.78, 1.04, plus three at each end at x=-1.22 and x=+1.22 with y at -0.29, 0.0, +0.29. Cage top sits at 0.95 m; the bars stand just outside the slab's 0.475 m half-depth so they read as driven into the ground around the plot.",
+    "environment": [
+     "place(\"gothic_statue\", at=(1.0, 3.2), rot_deg=200) - the headstone of the grave beside, behind-right, 1.18-1.38 m off axis.",
+     "box(size=(1.9, 0.9, 0.16), at=(-1.15, 1.8), rot_deg=8, color=(0.17, 0.165, 0.155), rough=0.9) - an uncaged grave slab behind-left, the comparison the shot needs.",
+     "box(size=(7.0, 0.35, 2.1), at=(0.0, 6.6), rot_deg=8, color=(0.085, 0.082, 0.078), rough=0.9) - churchyard wall catching the far edge of the fog.",
+     "lamp(at=(-1.9, 4.4), toward=(-0.5, 1.2), energy=1700, color=(1.0, 0.74, 0.46)) - the watchers' lamp, distant behind-left, 1.36 m off axis and well inside frame."
+    ],
+    "ground": "ground(size=80, texture=\"brown_mud_dry\", scale=2.5, wet=0.6) - rain-soaked grave earth, reflective enough to carry the bar shadows and the lamp into the bottom of frame.",
+    "lighting": "Key: light(\"SPOT\", location=(-2.6, 3.4, 2.3), at=(0.10, -0.60, 0.10), energy=2600, size=0.3, color=(0.80, 0.87, 1.0), spot_size=math.radians(40)) - deliberately LOW (2.3 m) and behind-left at 5.3 m, aimed PAST the cage at the mud in front of it, so the beam rakes between the uprights and throws long bar shadows down the slab and toward the lens. size=0.3 keeps those shadows hard; a larger soft size smears them and the shot loses its only idea. Fill: light(\"AREA\", location=(2.8, -2.6, 1.6), at=(0.0, 0.0, 0.5), energy=100, size=2.5, color=(1.0, 0.85, 0.68)) - warm, so the near bars are not pure silhouette. World: world(color=(0.010, 0.012, 0.020), strength=0.40, fog=0.022, anisotropy=0.5) - dense enough that the raking beam is visible as shafts between the bars.",
+    "camera": "camera(location=(0.50, -4.65, 0.40), at=(0.0, -0.25, 0.60), lens=40) rising to location=(0.20, -4.05, 1.05) on the same aim. Low-angle rise with a small push, 0.93 m of travel; distance 4.4 m to 3.8 m; cage 25 to 28 percent of frame height.",
+    "staging_notes": "Duration 5.5 s. THIS SHOT CHANGED MOST, FOR TWO SEPARATE REASONS. First, the earlier draft stood large_iron_gate behind a slab here and called it a cage - a 2.93 m vertical gate reads as a gate in a field, not a frame locked over a plot, and it made this beat a near-duplicate of the hook (same model, same backlight, same push). Second, a rival draft's box-built mortsafe is the better object, so it is grafted here with its geometry corrected: that version put posts at x=+/-0.45 and y=+/-0.55 on a 2.0 x 0.9 m slab, which builds a 0.9 x 1.1 m crate narrower than half the grave it covers. The bars above are solved to the slab. NO TOP GRID, AND THAT IS NOT NEGOTIABLE: box() always rests its base on the ground, so a horizontal bar at 0.95 m cannot be built with the sanctioned helpers - the cage is an upright grille, which still reads as iron locked around the grave, and the raking shadows do the rest. Only add rails if the author is permitted to offset a returned box's z, which the house style of the existing generated scenes never does. AIM POINT: aim at (0.0, -0.25, 0.60), just inside the near bars. Aiming at the cage centre puts a near upright about 1.07 m in front of the target and check_sightline refuses the render; at this target the first hit is 0.31 m away and the guard passes. WORDING: locked, not bolted - mortsafes came as padlocked frames and as iron-and-stone boxes lowered with the coffin, and 'bolted' describes only one. 'Families and parishes', not families alone - these were commonly parish or mortsafe-society property hired by a family. Scotland is correct here and is also why the hook says England: no-property-in-a-corpse is English common law, while Scotland prosecuted violation of sepulchres, and Scotland and north-east England are where mortsafes are documented from about 1816."
+   },
+   "start_s": 14.496,
+   "end_s": 20.405
+  },
+  {
+   "label": "reveal",
+   "act": 3,
+   "sentences": [
+    {
+     "text": "In eighteen thirty two the law handed anatomists the unclaimed poor, and the trade died out.",
+     "start_s": 21.605,
+     "end_s": 27.365,
+     "audio": "vo004.wav",
+     "speed": 0.95
+    }
+   ],
+   "shot": {
+    "id": "shot_05",
+    "description": "A rough unmarked stone sits alone in one hard pool of cold light, a row of nameless flat slabs receding into fog behind it, the carved monument and the churchyard gate now only shapes in the murk, as the camera descends slowly onto the stone.",
+    "subject": "place(\"namaqualand_boulder_02\", at=(0.0, 0.0), rot_deg=12) - a low wide granite stone, 2.53 m across and 0.88 m tall, the marker of a grave nobody paid for. A real textured model, not a box: this is the payoff frame and it cannot be a grey primitive.",
+    "environment": [
+     "box(size=(1.9, 0.85, 0.16), at=(0.95, 1.9), rot_deg=6), box(size=(1.9, 0.85, 0.16), at=(1.30, 3.4), rot_deg=10), box(size=(1.9, 0.85, 0.16), at=(1.55, 4.9), rot_deg=5), all color=(0.15, 0.148, 0.142), rough=0.9 - a row of nameless slabs receding behind-right. Solved to sit 0.38-0.61 m off the view axis at the start of the move, so they genuinely recede through frame instead of falling out of it.",
+     "place(\"gothic_statue\", at=(-0.55, 3.0), rot_deg=150) - the paid-for monument, reduced to a fogged silhouette behind-left, 0.87-1.26 m off axis.",
+     "place(\"large_iron_gate\", at=(2.3, 7.0), rot_deg=20) - the gate from the hook, almost lost in fog at 11 m. Nobody is guarding anything now. This is the only callback in the film.",
+     "box(size=(7.0, 0.35, 1.9), at=(-0.5, 7.2), rot_deg=6, color=(0.085, 0.082, 0.078), rough=0.9) - churchyard wall.",
+     "lamp(at=(-0.7, 8.0), toward=(-0.3, 3.0), energy=1500, color=(1.0, 0.74, 0.46)) - a far halo at the edge of frame, dimmest lamp in the film."
+    ],
+    "ground": "ground(size=80, texture=\"brown_mud_dry\", scale=2.5, wet=0.5)",
+    "lighting": "Key: light(\"SPOT\", location=(-2.2, -1.4, 3.0), at=(0.0, 0.0, 0.45), energy=1800, size=0.25, color=(0.80, 0.86, 1.0), spot_size=math.radians(28)) - one narrow hard pool from front-left above at 3.65 m, on the stone and nothing else, so its shadow runs back along the slab row and everything beyond falls away. Fill: light(\"AREA\", location=(2.4, -2.2, 1.4), at=(0.8, 2.0, 0.3), energy=80, size=2.5, color=(1.0, 0.86, 0.70)) - a low warm wash aimed INTO the receding slabs, the only thing keeping the row readable rather than black. World: world(color=(0.010, 0.012, 0.020), strength=0.35, fog=0.024, anisotropy=0.5) - densest fog of the five, still under the 0.03 clamp.",
+    "camera": "camera(location=(-0.80, -3.95, 1.45), at=(0.0, -0.35, 0.55), lens=40) descending to location=(-0.30, -3.45, 1.00) on the same aim. Slow descending push onto the stone, 0.84 m of travel; distance 3.8 m to 3.2 m; stone 26 to 31 percent of frame height.",
+    "staging_notes": "Duration 5.7 s. THE HERO CHANGED AND THE WHOLE FRAME WAS RE-SOLVED. The earlier draft made this a 0.5 x 0.4 x 1.1 m box, but box() takes only a flat colour with no texture or normal map, so the film's payoff would have been an untextured grey cube; and at the 45 mm it specified, almost every listed background item was outside the frame (statue 2.70 m off axis against a 1.89 m half-width, gate 3.79 m against 2.75 m, lamp 3.70 m against 2.52 m, two of three slabs also clear). The hero is now a real granite model, the lens is 40 mm, and every item is re-placed against the true half-width of 0.253*d. A FLAT SLAB CANNOT BE THE HERO, which is why the row stays in the mid-ground: at a legal 3-6 m camera distance a 0.16-0.22 m slab subtends about seven percent of frame height, half the 15 percent floor, whatever the lens. AIM POINT: aim at (0.0, -0.35, 0.55), on the stone's near face. Aiming at its centre puts the near face 0.64 m in front of the target with the hit at 0.84 of the way there, which trips check_sightline by a few centimetres. THE SENTENCE WAS SOFTENED ON PURPOSE: the Anatomy Act of 1832 removed the trade's reason to exist but snatching wound down over the following years, so saying the trade ENDED in eighteen thirty two is the one line a historian pushes back on. Keep 'unclaimed poor' - that is accurately what the Act reached, in practice the workhouse and hospital dead. Kokoro must read 'eighteen thirty two' as written words; if any edit turns it into 1832 the narrator says 'one thousand eight hundred and thirty two' and the beat runs long."
+   },
+   "start_s": 21.605,
+   "end_s": 27.365
+  }
+ ],
+ "facts": [
+  {
+   "claim": "English common law recognised no property in a dead body, so taking a corpse from a grave was a misdemeanour rather than larceny. This is why the hook says England, not Britain.",
+   "basis": "The eighteenth-century King's Bench line, R v Lynn (1788), and the standard legal and medical histories of the resurrection men. Scotland prosecuted the same acts under its own crime of violation of sepulchres, which is the jurisdictional reason the hook is scoped to England."
+  },
+  {
+   "claim": "In England and Wales before 1832 the only lawful supply of bodies for anatomy teaching was the corpses of executed murderers.",
+   "basis": "Statute text of the Murder Act 1752. Scoped to England and Wales on purpose: Edinburgh's schools also held older grants covering certain unclaimed dead, so a Britain-wide version of this claim is wrong."
+  },
+  {
+   "claim": "Anatomy schools paid cash for fresh corpses and demand from the private schools far exceeded the lawful supply, which is what made a new grave worth money.",
+   "basis": "Price and practice evidence given to the 1828 Select Committee on Anatomy, plus anatomy school account books. A figure exists (roughly eight to ten pounds a body in Edinburgh in the eighteen twenties) and is deliberately not spoken."
+  },
+  {
+   "claim": "Families and parishes fitted mortsafes, locked iron cages or frames, over new graves, mainly in Scotland and north-east England from about 1816, leaving them in place for weeks until the body was no longer worth taking.",
+   "basis": "Surviving mortsafes in Scottish kirkyards, kirk session and parish records, and museum documentation. The safes were commonly parish or mortsafe-society property hired by a family, which is why the line credits families AND parishes."
+  },
+  {
+   "claim": "Churchyards also kept watch-houses and rotas of family or parish watchers through the nights after a burial.",
+   "basis": "Surviving churchyard watch-houses and watch towers, and parish and kirk session minutes recording watch duty."
+  },
+  {
+   "claim": "The Anatomy Act of 1832 gave licensed anatomists lawful access to bodies left unclaimed after death, in practice mostly the workhouse and hospital dead, and the trade died out over the following years.",
+   "basis": "Statute text of the Anatomy Act 1832 and the standard scholarly treatment of its consequences (Ruth Richardson, Death, Dissection and the Destitute). The wording avoids claiming the trade stopped in 1832 itself."
+  },
+  {
+   "claim": "CUT FROM THE SCRIPT, recorded so it is not re-added: some stolen bodies were shipped as ordinary freight in casks of brine or salt.",
+   "basis": "True and well documented (the October 1826 Liverpool dock casks consigned to Edinburgh), but dropped because the only barrel in the asset library is a blue-painted steel drum, so the frame could not honestly carry the claim."
+  },
+  {
+   "claim": "CUT FROM THE SCRIPT, recorded so it is not re-added: because the shroud, coffin and grave goods WERE property, taking them was a felony, and snatchers stripped the corpse and left the grave clothes behind.",
+   "basis": "Contemporary trial reports and 1828 Select Committee evidence. Dropped because the library has no cloth, coffin or grave goods, so the narration would name an object the frame cannot show."
+  }
+ ],
+ "changes_made": [
+  "Cut the brine-cask evidence beat entirely. I parsed barrel_03 off disk: radius is a constant 0.303-0.311 m from base to lid with two raised rolling rings and no bilge, and the diffuse map averages RGB (69, 86, 110). It is a blue-painted steel drum, not a wooden cask, and the library's own one-line description is wrong. This confirms the runners-up buildable lens's blocking finding; keeping it would have put a modern oil drum in a Georgian dock scene.",
+  "Restaged the evidence beat (shot_03) as a fresh grave with a rough stone marker (boulder_01) and rewrote the line to the claim the frame can carry: a new grave was worth real money, because anatomy schools paid cash. Keeps the 1828 Select Committee evidence, loses only the transport detail.",
+  "Replaced beat four's gate with a box-built mortsafe grafted from the runner-up, fixing the two notes every lens raised: the gate is not a cage, and beats one and four were the same shot. The runner-up's own geometry error is corrected (its posts at x +/-0.45, y +/-0.55 built a 0.9 x 1.1 m crate on a 2.0 x 0.9 m slab); bars are now solved to the slab at x +/-1.04 and y +/-0.58.",
+  "Dropped the mortsafe's top grid: box() always rests its base on the ground, so a horizontal bar at 0.95 m is not buildable with the sanctioned helpers. The cage is an upright grille whose raking bar shadows carry the 'over the grave' read instead.",
+  "Replaced the payoff's grey primitive hero with namaqualand_boulder_02 (buildable and story lenses both flagged the box). The nameless slab row stays in the mid-ground because a 0.16 m slab subtends only about seven percent of frame height at any legal camera distance, so the story lens's slab-as-hero idea cannot meet the 15 percent floor.",
+  "Re-solved every dressed item in all five shots against the real portrait frame (sensor_fit AUTO puts 36 mm on the 1920 axis, so the horizontal half-width is 10.125*d/lens) and kept each inside 0.8 of that half-width at its own depth. In the winning draft the beat-two trunk, the beat-three kerb boulder, the beat-one boulder and four of five items in beat five were outside frame.",
+  "Moved every camera aim onto the subject's NEAR face rather than its centre. Measured against check_sightline's 0.6 m tolerance, aiming at the centre of boulder_01, gothic_statue, namaqualand_boulder_02 or the cage raises SIGHTLINE BLOCKED on four of the five shots.",
+  "Dropped the moonless night HDRI: it does not exist in this library (only assets/studio.hdr, a bright studio probe, and a flat 121212). Every shot now uses a flat dark world colour at strength 0.35-0.45, up from 0.03-0.06, because the renderer's measured range requires strength at or above 0.3 or the fog has nothing to scatter and shadows go pure black.",
+  "Moved all lights into the measured bands: key SPOT 1800-2600 W at 3-6 m (the draft used 400-1400 W spots and made a lamp bulb the key), AREA fill 80-120 W, fog 0.014-0.024 with the camera inside 6 m. Every cone is written math.radians(...) and every colour as an RGB tuple - the two silent traps the buildable lens caught, since spot_size is radians clamped at pi and lamp() colour defaults warm.",
+  "Hook rescoped from Britain to England on the factual lens's jurisdiction note, which also lets beat four keep 'In Scotland' as the place the answer was hardest rather than a contradiction.",
+  "Beat two lost its shroud: the library has no cloth, so the sentence now says a body belonged to no one and taking it was not theft, which is what the frame shows. The grave-clothes fact is recorded in the facts list as deliberately cut.",
+  "Payoff softened from 'the trade ended in eighteen thirty two' to 'the law handed anatomists the unclaimed poor, and the trade died out', removing the false suddenness all three lenses flagged. Beat four's 'bolted' became 'locked' and 'families' became 'families and parishes', both from the runner-up factual lens.",
+  "Reframed shot one at 24 mm rather than 28 mm so it holds 32-38 percent of frame height with the camera inside 3-6 m, and stopped the push at 5.1 m: the draft's move ended at 42 percent, over the ceiling. Final frame fractions are 32-38, 33, 28-35, 25-28 and 26-31 percent.",
+  "Trimmed the script from 69 to 68 words in five sentences, about 24 seconds of speech at 170 wpm, with shot durations of 4.9, 4.5, 4.5, 5.5 and 5.7 seconds summing to 25.1 seconds."
+ ],
+ "runtime_s": 27.365,
+ "audio_dir": "/home/apollo/blender-spike/mvp/audio",
+ "narration_mode": "sentence"
+}

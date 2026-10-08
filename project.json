@@ -1,0 +1,97 @@
+{
+  "goal": "Find out whether ZachDFilms / His Story / Her Story-style 3D explainer shorts can be made on the HP, and what earns those channels their views. Rendering is solved; an LLM cannot stage a shot, so the next step is studying the reference channels before building any templates.",
+  "updated": "2026-09-15",
+  "repo": "~/blender-spike",
+  "plan": "PROJECT-3D.md",
+  "destination": "undecided (deliberately) - no channel, long-form or client use chosen",
+  "slices": [
+    {
+      "n": -1,
+      "title": "MVP v2: PS1 look + body model + fast voice",
+      "status": "done",
+      "detail": "2026-09-16: mvp2/final/graves-that-wore-iron.mp4 - 24 s, 12 word-cut shots, Quaternius CC0 rig, 320x569 PS1 render (~7 min), Kokoro 1.3x lo-fi. Pipeline: mvp2/README.md."
+    },
+    {
+      "n": 0,
+      "title": "MVP video: The Graves That Wore Iron",
+      "status": "done",
+      "detail": "2026-09-15: mvp/final/graves-that-wore-iron.mp4 - 28.2 s, 676 frames at 1080x1920/24 fps, Kokoro narration, word-pop captions, -14 LUFS. Render 33 min (3 s/frame at 16 samples). Panel: 1 of 5 stills usable; v2 fix list in mvp/README.md."
+    },
+    {
+      "n": 1,
+      "title": "Headless Blender on the Vega 11",
+      "status": "done",
+      "detail": "Blender 4.5.13 LTS, EEVEE Next. 3.75 s/frame @32 samples, so a 60 s Short takes ~113 min."
+    },
+    {
+      "n": 2,
+      "title": "CC0 asset library + preamble.py toolkit",
+      "status": "done",
+      "detail": "14 models, 6 textures. A hand-built scene reaches the target style (out/smoke_env2.png)."
+    },
+    {
+      "n": 3,
+      "title": "LLM authors the scene",
+      "status": "parked",
+      "detail": "1/7 usable over three rounds, as scored by the judge panel. Stopped 2026-09-11 (operator)."
+    },
+    {
+      "n": 4,
+      "title": "Render -> judge -> retry loop",
+      "status": "parked",
+      "detail": "Built but never measured (a session limit killed 6 of 9 retries)."
+    },
+    {
+      "n": 5,
+      "title": "Study A: harvest + sample",
+      "status": "done",
+      "detail": "2026-09-15: 6,619 uploads harvested for 269 quota units -> study/videos.jsonl and sample.json. Winners vs median (views): Zack 98M vs 16.5M, His 24.8M vs 4.2M, Her 12.4M vs 2.2M."
+    },
+    {
+      "n": 6,
+      "title": "Study B: captions + frames",
+      "status": "next",
+      "detail": "Throttled, one at a time on the home IP. Stop on the first 403/429 and delete the mp4s."
+    },
+    {
+      "n": 7,
+      "title": "Study C-D: analyse + aggregate",
+      "status": "todo",
+      "detail": "scriptstudy metrics, beat maps, first-3-s visual labels -> report.md + contract.json."
+    },
+    {
+      "n": 8,
+      "title": "Study E: validate the contract",
+      "status": "todo",
+      "detail": "Score held-out ranks 51-100 against median neighbours and report either way."
+    },
+    {
+      "n": 9,
+      "title": "Staging templates (~6)",
+      "status": "todo",
+      "detail": "Only if the study warrants it. Design input: docs/ps1-factory-spec.md (ChatGPT) + docs/ps1-factory-assessment.md. Start trimmed: props + cameras, 360x640, no humanoid."
+    },
+    {
+      "n": 10,
+      "title": "Gate 5: narrated 30 s piece",
+      "status": "todo",
+      "detail": "Through ClipVault's script -> Kokoro -> longrender chain."
+    }
+  ],
+  "decisions": [
+    "The judge panel is the standard, not any single eye (mine said 4/7 where the panel said 1/7).",
+    "Study work lives in ~/blender-spike/study/, never in ~/clipvault/study/. Import from ClipVault and change nothing there.",
+    "Use ClipVault's YouTube token in memory only, and never the campaign client.",
+    "Never publish or redistribute downloaded video, and never copy the channels' phrasing.",
+    "One Blender at a time (out/.render.lock), since a render peaks at ~2 GB.",
+    "Nothing runs unattended: no timers, crons or services.",
+    "2026-09-15: the ChatGPT 'PS1 factory' spec is the templates design, not the next task. Study first. GPU-model phases cannot run on the HP (docs/ps1-factory-assessment.md).",
+    "2026-09-15: the Shorts cap is 180 s, not 60 s. His/Her Story Shorts run 61-180 s (only 45/50 videos are 60 s or less), and there the longer ones earn more."
+  ],
+  "open_questions": [
+    "MVP v1 panel scores: 2.33/2.00/1.67/1.67/2.67 (one usable). Worth a v2 pass on the fix list in mvp/README.md before any of this is posted anywhere.",
+    "His Story's median bucket is ~2 months younger than its winners (2026-07-06 vs 04-28). Channel age is a real confound, so compare views/day as well as views.",
+    "Where would the content go: a channel, long-form, or client work? Deliberately undecided.",
+    "Close-out owed: rewrite findings.md to the round-3 state and clear the ~32 scratch files in /tmp."
+  ]
+}

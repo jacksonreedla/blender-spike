@@ -1,0 +1,212 @@
+{
+ "barrel_03": {
+  "path": "/home/apollo/blender-spike/assets/models/barrel_03/barrel_03_1k.gltf",
+  "size_m": [
+   0.634,
+   0.639,
+   0.93
+  ],
+  "base_z": -0.0,
+  "centre_xy": [
+   0.0,
+   -0.0
+  ],
+  "mesh_count": 1,
+  "tris": 1473
+ },
+ "boulder_01": {
+  "path": "/home/apollo/blender-spike/assets/models/boulder_01/boulder_01_1k.gltf",
+  "size_m": [
+   1.272,
+   1.83,
+   1.004
+  ],
+  "base_z": -0.0736,
+  "centre_xy": [
+   -0.112,
+   0.033
+  ],
+  "mesh_count": 1,
+  "tris": 66122
+ },
+ "brass_diya_lantern": {
+  "path": "/home/apollo/blender-spike/assets/models/brass_diya_lantern/brass_diya_lantern_1k.gltf",
+  "size_m": [
+   0.123,
+   0.123,
+   0.381
+  ],
+  "base_z": 0.0,
+  "centre_xy": [
+   0.005,
+   0.006
+  ],
+  "mesh_count": 3,
+  "tris": 12742
+ },
+ "coastal_cliff_01": {
+  "path": "/home/apollo/blender-spike/assets/models/coastal_cliff_01/coastal_cliff_01_1k.gltf",
+  "size_m": [
+   91.98,
+   10.967,
+   10.326
+  ],
+  "base_z": -0.65,
+  "centre_xy": [
+   0.934,
+   0.722
+  ],
+  "mesh_count": 1,
+  "tris": 461824
+ },
+ "dead_tree_trunk": {
+  "path": "/home/apollo/blender-spike/assets/models/dead_tree_trunk/dead_tree_trunk_1k.gltf",
+  "size_m": [
+   3.051,
+   0.278,
+   0.29
+  ],
+  "base_z": -0.0277,
+  "centre_xy": [
+   -0.014,
+   0.032
+  ],
+  "mesh_count": 1,
+  "tris": 101802
+ },
+ "dining_chair_02": {
+  "path": "/home/apollo/blender-spike/assets/models/dining_chair_02/dining_chair_02_1k.gltf",
+  "size_m": [
+   0.434,
+   0.576,
+   0.973
+  ],
+  "base_z": 0.0013,
+  "centre_xy": [
+   0.0,
+   0.043
+  ],
+  "mesh_count": 1,
+  "tris": 22013
+ },
+ "gothic_statue": {
+  "path": "/home/apollo/blender-spike/assets/models/gothic_statue/gothic_statue_1k.gltf",
+  "size_m": [
+   1.477,
+   1.564,
+   1.74
+  ],
+  "base_z": -0.0159,
+  "centre_xy": [
+   -0.044,
+   0.408
+  ],
+  "mesh_count": 1,
+  "tris": 27739
+ },
+ "large_iron_gate": {
+  "path": "/home/apollo/blender-spike/assets/models/large_iron_gate/large_iron_gate_1k.gltf",
+  "size_m": [
+   2.95,
+   0.097,
+   2.929
+  ],
+  "base_z": -0.0079,
+  "centre_xy": [
+   0.0,
+   -0.013
+  ],
+  "mesh_count": 4,
+  "tris": 38140
+ },
+ "marble_bust_01": {
+  "path": "/home/apollo/blender-spike/assets/models/marble_bust_01/marble_bust_01_1k.gltf",
+  "size_m": [
+   0.272,
+   0.3,
+   0.515
+  ],
+  "base_z": 0.0001,
+  "centre_xy": [
+   0.013,
+   -0.005
+  ],
+  "mesh_count": 1,
+  "tris": 17456
+ },
+ "moon_rock_01": {
+  "path": "/home/apollo/blender-spike/assets/models/moon_rock_01/moon_rock_01_1k.gltf",
+  "size_m": [
+   0.212,
+   0.112,
+   0.075
+  ],
+  "base_z": -0.0027,
+  "centre_xy": [
+   0.001,
+   -0.006
+  ],
+  "mesh_count": 4,
+  "tris": 18668
+ },
+ "namaqualand_boulder_02": {
+  "path": "/home/apollo/blender-spike/assets/models/namaqualand_boulder_02/namaqualand_boulder_02_1k.gltf",
+  "size_m": [
+   2.532,
+   1.234,
+   0.883
+  ],
+  "base_z": -0.0595,
+  "centre_xy": [
+   0.082,
+   -0.008
+  ],
+  "mesh_count": 1,
+  "tris": 97964
+ },
+ "rock_face_01": {
+  "path": "/home/apollo/blender-spike/assets/models/rock_face_01/rock_face_01_1k.gltf",
+  "size_m": [
+   4.954,
+   3.827,
+   3.564
+  ],
+  "base_z": -0.0344,
+  "centre_xy": [
+   0.343,
+   1.552
+  ],
+  "mesh_count": 1,
+  "tris": 20174
+ },
+ "rock_face_02": {
+  "path": "/home/apollo/blender-spike/assets/models/rock_face_02/rock_face_02_1k.gltf",
+  "size_m": [
+   2.711,
+   2.127,
+   2.472
+  ],
+  "base_z": -0.1396,
+  "centre_xy": [
+   -0.906,
+   0.125
+  ],
+  "mesh_count": 1,
+  "tris": 29566
+ },
+ "street_lamp_01": {
+  "path": "/home/apollo/blender-spike/assets/models/street_lamp_01/street_lamp_01_1k.gltf",
+  "size_m": [
+   0.704,
+   0.386,
+   3.871
+  ],
+  "base_z": 0.0,
+  "centre_xy": [
+   0.0,
+   -0.0
+  ],
+  "mesh_count": 1,
+  "tris": 30610
+ }
+}

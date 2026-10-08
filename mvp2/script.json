@@ -1,0 +1,461 @@
+{
+ "slug": "graves-that-wore-iron",
+ "title": "The Graves That Wore Iron",
+ "word_count": 73,
+ "beats": [
+  {
+   "label": "hook",
+   "act": 1,
+   "sentences": [
+    {
+     "text": "Stealing a corpse in Georgian England was barely a crime."
+    }
+   ]
+  },
+  {
+   "label": "context",
+   "act": 1,
+   "sentences": [
+    {
+     "text": "A body belonged to no one, so taking it was not theft."
+    }
+   ]
+  },
+  {
+   "label": "evidence",
+   "act": 2,
+   "sentences": [
+    {
+     "text": "Anatomy schools paid cash, the hangman sent too few, so men went digging at night."
+    }
+   ]
+  },
+  {
+   "label": "reversal",
+   "act": 2,
+   "sentences": [
+    {
+     "text": "In Scotland, families locked iron cages over graves."
+    }
+   ]
+  },
+  {
+   "label": "reveal",
+   "act": 3,
+   "sentences": [
+    {
+     "text": "Watchmen sat up in the churchyard for weeks, until the body was worthless."
+    }
+   ]
+  },
+  {
+   "label": "payoff",
+   "act": 3,
+   "sentences": [
+    {
+     "text": "In eighteen thirty two the law handed anatomists the unclaimed poor, and the trade died."
+    }
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "id": "shot_01",
+   "beat": 1,
+   "cut_on": "Stealing",
+   "set": "gate_set()",
+   "dressing": "night(world_strength=0.22, fog=0.011, aniso=0.75, color=(0.004,0.006,0.012)) - the values from the already-rendered _set_gate.py. gate_set()'s own practical lamp at (-2.15,2.85) and its two spots do all the lighting; no extra key. place(\"barrel_03\", at=(0.70,0.05)) half clipped at frame right as foreground mass.",
+   "characters": [
+    {
+     "clip": "Crouch_Fwd_Loop",
+     "at": [
+      -0.55,
+      -0.8
+     ],
+     "facing_deg": 270,
+     "travel": 0.6
+    }
+   ],
+   "camera": "28 mm; CAM_START (0.55,-3.05,0.42) -> CAM_END (0.30,-2.10,0.86), CAM_AT (0.00,0.05,1.70); 1.08 m low push-in at knee height, rising",
+   "description": "A crouched man scuttles left to right across the wet cobbles in front of the locked gate, black against the warm bars.",
+   "staging_notes": "Camera side: front centre, knee height, 0.75 m/s. facing 270 makes local +Y point +X, so at 0.6 m/s he covers 0.86 m in 1.43 s, entering frame left on the first frame (normalised x -1.00) and reaching centre by the cut. He stays 1.2-2.4 m from the lens and crosses BETWEEN camera and gate, so he is a silhouette against gate_set()'s warm spot at (-2.00,2.60,3.05) aimed at (0.55,0.15,0.50) - that black-on-warm cut is the whole shot at 320 px. CAM_AT sits ON the gate plane (y=0.05), so any bar the guard ray hits is within 0.6 m of the target and check_sightline() cannot abort; aim z 1.70 puts the 2.93 m gate arch across the top third, no empty black sky. The barrel is 0.93 m tall and the guard ray passes above it."
+  },
+  {
+   "id": "shot_02",
+   "beat": 1,
+   "cut_on": "England",
+   "set": "churchyard(seed=11, avoid=(0,0,2.6)) + open_grave(at=(0.0,0.0), rot_deg=75)",
+   "dressing": "night(); the churchyard lamp burns far behind at (-2.4,9.0) in fog. open_grave puts the spoil heap at (-0.97,+0.26) and the dragged slab at (-1.47,+0.70), both between the men and the lamp. key_cold((-3.60,-0.40,4.30),(0.40,0.50,0.60), energy=2600, spot_deg=40, size=0.30); fill_cold((2.70,-3.70,1.25),(0.10,-1.00,0.05), 60).",
+   "characters": [
+    {
+     "clip": "Fixing_Kneeling",
+     "at": [
+      0.9,
+      0.9
+     ],
+     "facing_deg": 215
+    },
+    {
+     "clip": "Crouch_Fwd_Loop",
+     "at": [
+      -0.3,
+      -1.45
+     ],
+     "facing_deg": 300,
+     "travel": 0.6
+    }
+   ],
+   "camera": "32 mm; CAM_START (1.75,-4.75,1.35) -> CAM_END (1.05,-3.95,0.95), CAM_AT (0.45,0.45,0.50); 1.14 m push-in dropping toward the pit lip",
+   "description": "A man kneels at the lip of a half dug grave with his hands in the earth while a second sneaks in past the camera.",
+   "staging_notes": "Camera side: right (opposite shot_01's centre). The kneeler at (0.90,0.90) facing 215 with phase=-60 on the 125-frame clip is lifted verbatim from the rendered still mvp2/shots/_char_test.py - do not re-derive that facing, it is the one that puts his hands over the hole. Both figures are clear of the dug depression (pit radius 1.41 and 1.48 against the 1.15 cutoff): character() grounds feet at z=0 and does not follow terrain, so anyone standing inside open_grave's patch floats over the hole. The crouching man enters frame left on frame 1 (normalised x -1.00) and is at centre-left by the cut, passing 3.1-3.7 m out."
+  },
+  {
+   "id": "shot_03",
+   "beat": 2,
+   "cut_on": "body",
+   "set": "churchyard(seed=11, avoid=(0,0,2.6)) + open_grave(at=(0.0,0.0), rot_deg=75)",
+   "dressing": "night(); the same plot as shot_02, nothing moved. place(\"brass_diya_lantern\", at=(-0.15,-2.15)) set down on the mud, PLUS light(\"POINT\",(-0.15,-2.15,0.45),(0.60,-1.35,0.30), 45, size=0.05, color=(1.0,0.70,0.34)) - the prop emits nothing, so that point light is the warm pool on the corpse. key_cold((-3.40,0.20,3.80),(0.30,-1.10,0.30), energy=2400, spot_deg=36, size=0.20); fill_cold((3.20,-3.40,1.40),(0.00,-0.80,0.30), 70).",
+   "characters": [
+    {
+     "clip": "Death01",
+     "at": [
+      0.2,
+      -1.45
+     ],
+     "facing_deg": 275
+    },
+    {
+     "clip": "Fixing_Kneeling",
+     "at": [
+      0.95,
+      -1.05
+     ],
+     "facing_deg": 190
+    },
+    {
+     "clip": "Crouch_Idle_Loop",
+     "at": [
+      1.35,
+      0.15
+     ],
+     "facing_deg": 165
+    }
+   ],
+   "camera": "35 mm; CAM_START (-2.20,-2.95,2.25) -> CAM_END (-1.45,-2.35,1.30), CAM_AT (0.35,-1.25,0.40); 1.35 m drop and arc down onto the body",
+   "description": "The body is out of the ground and lying on the mud while a man kneels over it going through its clothes.",
+   "staging_notes": "Camera side: left and falling - the opposite corner of the same plot, so the place still reads as continuous. Death01 runs with phase=-45 of its 58 frames so the figure is already motionless on frame 1 and never re-falls inside a 1.71 s loop. The corpse root sits 1.45 m south of the pit centre (pit radius 1.35) because a body laid inside the dug footprint would float over the hole; facing 275 lays it along +X so the kneeler at (0.95,-1.05) is beside its torso, not on it. Use Fixing_Kneeling, NOT Interact: a standing reach at this lens and camera height puts the head out of the top of frame (measured), and a kneeling figure over a corpse reads as robbing it. The lantern sits 0.47 m off the guard ray and 0.6 m below it."
+  },
+  {
+   "id": "shot_04",
+   "beat": 2,
+   "cut_on": "taking",
+   "set": "churchyard(seed=11, avoid=(0,0,2.6)) + open_grave(at=(0.0,0.0), rot_deg=75)",
+   "dressing": "night(); same plot, third angle. NO front key - the silhouette is the shot: key_cold((-2.20,3.60,2.80),(0.20,-1.00,1.10), energy=2800, spot_deg=34, size=0.18) sits BEHIND the lifter and rims him, with the churchyard lamp at (-2.4,9.0) burning further behind again; fill_cold((2.60,-3.80,1.50),(0.20,-1.20,0.90), 40) only, so his front stays black.",
+   "characters": [
+    {
+     "clip": "PickUp_Table",
+     "at": [
+      0.25,
+      -1.35
+     ],
+     "facing_deg": 175
+    },
+    {
+     "clip": "Death01",
+     "at": [
+      0.2,
+      -1.7
+     ],
+     "facing_deg": 100
+    }
+   ],
+   "camera": "40 mm; CAM_START (0.45,-4.15,0.40) -> CAM_END (0.20,-3.35,0.95), CAM_AT (0.25,-1.25,0.95); 1.00 m rise that climbs with the lift",
+   "description": "He bends over the corpse, takes the weight and heaves it up to his chest, rimmed by the lamp behind him.",
+   "staging_notes": "Camera side: front, ankle height rising to hip height so lens and shoulders climb together; tightest lens in the film (40 mm, horizontal half-angle only 14.2 deg) so the lift fills the narrow frame. PickUp_Table is 20 frames: phase=-10 puts him mid-lift on frame 1 and the loop repeats about twice in 1.43 s, so cut on an up-beat. The corpse root is 0.35 m in front of his feet and lies toward -X across the bottom of frame - nothing attaches to the hands, so the load only reads because a body is on the ground under them. Every light is behind him; the v1 mistake was promising a backlit lift and then keying it from the front."
+  },
+  {
+   "id": "shot_05",
+   "beat": 3,
+   "cut_on": "Anatomy",
+   "set": "anatomy_room: cobble_ground(scale=2.0, wet=0.35) + tbox walls + a stone slab (full build in dressing)",
+   "dressing": "night(world_strength=0.16, fog=0.006, aniso=0.5). tbox((6.40,0.30,2.80), at=(0.00,2.90), texture=\"cobblestone_03\", tiles=3.0) back wall; tbox((0.30,6.60,2.80), at=(-3.00,0.00)) and at=(3.00,0.00) side walls; tbox((1.70,0.30,2.60), at=(-2.15,-0.40)) and at=(2.15,-0.40) front wall, leaving a 2.6 m doorway gap across x -1.30..+1.30. tbox((1.95,0.85,0.80), at=(0.30,1.70), texture=\"aerial_rocks_02\", tiles=1.4) is the dissecting slab. place(\"marble_bust_01\", at=(-1.90,2.35), scale=2.2) = 1.13 m of pale stone standing ON THE FLOOR; place(\"dining_chair_02\", at=(1.85,2.15), rot_deg=205); place(\"barrel_03\", at=(-2.35,0.95)); place(\"brass_diya_lantern\", at=(-1.05,0.55)) + light(\"POINT\",(-1.05,0.55,0.50),(0.10,1.00,0.50), 50, size=0.05, color=(1.0,0.70,0.36)); light(\"POINT\",(0.30,1.40,2.35),(0.25,1.20,0.60), 340, size=0.25, color=(1.0,0.82,0.55)) is the hanging lamp over the slab, above the frame; fill_cold((0.20,-3.20,2.00),(0.15,1.00,1.00), 55).",
+   "characters": [
+    {
+     "clip": "PickUp_Table",
+     "at": [
+      -0.6,
+      0.95
+     ],
+     "facing_deg": 275
+    },
+    {
+     "clip": "Interact",
+     "at": [
+      0.7,
+      1.15
+     ],
+     "facing_deg": 95
+    },
+    {
+     "clip": "Death01",
+     "at": [
+      0,
+      0.4
+     ],
+     "facing_deg": 285
+    }
+   ],
+   "camera": "28 mm; CAM_START (1.45,-1.15,1.45) -> CAM_END (0.30,-1.35,1.20), CAM_AT (0.05,0.95,0.95); 1.19 m lateral track right to centre, inside the room",
+   "description": "In a lit room the carrier holds the body up at chest height and the anatomist reaches out to take it.",
+   "staging_notes": "Camera side: right, and INSIDE the room (y > -0.40) so no wall is ever between lens and subject - the school is a standalone set, never built behind gate_set()'s closed gate, which is what would abort a render. The two men face each other across X (275 and 95) with the corpse lying between them, so the beat has a body in it. This is the one bright frame in a dark film, which is what makes the money beat read; the warm hanging point at (0.30,1.40,2.35) does the lighting because place() emits nothing. The bust is SCALED to 2.2 and stands on the floor - place() has no z argument, so nothing goes on a plinth. Interact is used exactly once in this film, here, where a reach means payment."
+  },
+  {
+   "id": "shot_06",
+   "beat": 3,
+   "cut_on": "hangman",
+   "set": "anatomy_room (same build as shot_05, nothing moved)",
+   "dressing": "night(world_strength=0.16, fog=0.006); the same room, one body, clear floor. Lantern carried over to place(\"brass_diya_lantern\", at=(1.20,0.25)) with its light(\"POINT\",(1.20,0.25,0.50),(0.40,1.00,0.45), 50, size=0.05, color=(1.0,0.70,0.36)); the hanging lamp at (0.30,1.40,2.35) unchanged; fill dropped to fill_cold((0.20,-3.20,2.00),(0.15,1.00,1.00), 35) so the far corners go dark and the bare floor reads as bare.",
+   "characters": [
+    {
+     "clip": "Death01",
+     "at": [
+      0.1,
+      0.95
+     ],
+     "facing_deg": 260
+    },
+    {
+     "clip": "Walk_Formal_Loop",
+     "at": [
+      1.35,
+      1.95
+     ],
+     "facing_deg": 210,
+     "travel": 0.9
+    }
+   ],
+   "camera": "32 mm; CAM_START (-1.55,-0.15,0.85) -> CAM_END (-1.95,0.45,1.80), CAM_AT (0.25,1.15,0.50); 1.19 m crane up from the left off the single body",
+   "description": "One body on the floor of a room built for more, and a man in a formal walk crosses the empty boards away from it.",
+   "staging_notes": "Camera side: left, inside the room, rising - the lift reveals bare floor all round the single corpse, and that emptiness IS the lawful supply being too small. Two figures only, on purpose. Walk_Formal_Loop at 0.9 m/s covers 1.29 m, crossing from frame centre toward the door. Death01 facing 260 lays the body along +X, clear of the slab footprint (x -0.68..1.28, y 1.28..2.13) - the body lies along its facing from the root, so if a first still shows it inside the slab, rotate the facing, do not move the root. Camera stays inside the room, so the front wall never crosses the guard ray."
+  },
+  {
+   "id": "shot_07",
+   "beat": 3,
+   "cut_on": "men",
+   "set": "churchyard(seed=5, lamp_at=(2.80,8.40), statue_at=(-2.60,7.40), avoid=(-0.9,0.5,2.8)) + open_grave(at=(-0.90,0.50), rot_deg=20) + fresh_grave(at=(1.50,1.60))",
+   "dressing": "night(fog=0.013); two graves in one frame - one open with its spoil heap at (-1.24,1.44) and its dragged slab at (-1.17,2.11), one still mounded with its rough head stone at (1.50,2.90). key_cold((-4.20,1.00,4.00),(0.20,0.60,0.30), energy=3000, spot_deg=46, size=0.30); fill_cold((3.40,-3.60,1.60),(0.00,0.00,0.40), 80).",
+   "characters": [
+    {
+     "clip": "Fixing_Kneeling",
+     "at": [
+      -0.45,
+      -0.25
+     ],
+     "facing_deg": 30
+    },
+    {
+     "clip": "Push_Loop",
+     "at": [
+      0.75,
+      0.35
+     ],
+     "facing_deg": 330,
+     "travel": 0.12
+    },
+    {
+     "clip": "Crouch_Fwd_Loop",
+     "at": [
+      -0.55,
+      -1.35
+     ],
+     "facing_deg": 300,
+     "travel": 0.6
+    }
+   ],
+   "camera": "28 mm; CAM_START (0.05,-3.60,2.05) -> CAM_END (0.35,-2.70,1.35), CAM_AT (0.15,0.35,0.35); 1.18 m high dive-in over the nearest man",
+   "description": "Three men work two graves at once, one kneeling in the spoil, one shoving at the new mound, one sneaking across the foreground.",
+   "staging_notes": "Camera side: front and high, diving. Three bodies is the point of the line, so they are spread in DEPTH (2.6 / 3.6 / 4.0 m), not across the width: the portrait frustum is only +-19.9 deg wide at 28 mm and a lateral spread puts two of them off screen. All three stay inside frame for the whole 1.43 s (measured at start, still and end). Push_Loop faces 330 so he drives at the near edge of the mound, travel 0.12 m/s so he closes 0.17 m without entering the mesh (the mound ellipsoid spans x 0.84..2.16, y 0.45..2.75). The kneeler is at the pit's long edge, pit radius 1.91, clear of the depression. The crouching man passes 2.6 m to 1.9 m from the lens and lands at frame centre on the cut - the fastest shot in the film at 1.14 s of narration is next, so cut him while he is still moving."
+  },
+  {
+   "id": "shot_08",
+   "beat": 4,
+   "cut_on": "In",
+   "set": "churchyard(seed=2, lamp_at=(-5.50,9.50), lamp_toward=(-3.50,5.00), statue_at=None, avoid=(0,0,2.6)) + mortsafe(at=(0.00,0.00), rot_deg=-15) + fresh_grave(at=(2.20,1.50))",
+   "dressing": "mud_ground(scale=2.2, wet=0.62, value=1.0) and night(fog=0.016, aniso=0.25, color=(0.014,0.018,0.030), world_strength=0.42) - the rendered _set_cage.py values. key_cold((-4.90,2.74,1.60),(0.75,-2.10,0.02), energy=4800, spot_deg=50, size=0.03) rakes along the bars; fill_cold((3.90,-3.00,2.10),(0.40,-0.10,0.55), 140). place(\"brass_diya_lantern\", at=(-1.85,1.55)) + light(\"POINT\",(-1.85,1.55,1.75),(-0.20,0.60,0.70), 70, size=0.06, color=(1.0,0.66,0.32)) at the raised hand.",
+   "characters": [
+    {
+     "clip": "Push_Loop",
+     "at": [
+      -1.45,
+      0.15
+     ],
+     "facing_deg": 270,
+     "travel": 0.15
+    },
+    {
+     "clip": "Idle_Torch_Loop",
+     "at": [
+      -1.35,
+      1.95
+     ],
+     "facing_deg": 160
+    },
+    {
+     "clip": "Idle_Talking_Loop",
+     "at": [
+      -0.25,
+      2.35
+     ],
+     "facing_deg": 215
+    }
+   ],
+   "camera": "32 mm; CAM_START (2.35,-3.15,1.55) -> CAM_END (0.80,-2.20,0.80), CAM_AT (0.05,0.10,0.75) -> CAM_AT_END (-0.085,-0.547,0.55); 1.97 m arc in and down that lands on the padlock",
+   "description": "Villagers heave an iron cage down over a grave while a lantern is held over them, and the camera settles onto the shut padlock.",
+   "staging_notes": "Camera side: right, arcing in and down; the longest move in the film and the only one using CAM_AT_END, so the aim walks onto the lock at exactly (-0.085,-0.547,0.55) - that is where mortsafe() actually builds it, derived from its rot_deg, not guessed. The word 'locked' falls mid-shot as the aim arrives, which is why this whole sentence is one 2.29 s shot instead of two: the camera does the cutting. Push_Loop faces 270 so he drives +X into the cage end, travel 0.15 m/s = 0.34 m, closing without entering the bars (his root is 1.44 m out along the cage axis, cage half-length 1.10). The torch man's light is a real POINT at hand height - Idle_Torch_Loop carries no torch mesh and emits nothing. mortsafe and fresh_grave sit at different coordinates on purpose: a cage dropped on a mound intersects its own slab."
+  },
+  {
+   "id": "shot_09",
+   "beat": 5,
+   "cut_on": "Watchmen",
+   "set": "churchyard(seed=2, lamp_at=(-5.50,9.50), statue_at=None, avoid=(0.4,1.2,2.6)) + mortsafe(at=(0.40,1.20), rot_deg=-15)",
+   "dressing": "night(fog=0.018, aniso=0.40); the caged grave now mid-ground in thicker fog. place(\"dining_chair_02\", at=(0.75,-0.25), rot_deg=140) under the seated man; place(\"brass_diya_lantern\", at=(0.30,-0.75)) + light(\"POINT\",(0.30,-0.75,0.45),(0.30,0.40,0.60), 55, size=0.05, color=(1.0,0.68,0.34)) burning at his feet; light(\"POINT\",(-0.60,0.75,1.80),(0.20,1.10,0.70), 80, size=0.06, color=(1.0,0.66,0.32)) at the standing watchman's raised hand; key_cold((3.60,1.20,3.40),(-0.60,0.90,1.20), energy=2400, spot_deg=40, size=0.25); fill_cold((-3.20,-3.40,1.50),(-0.40,0.60,1.00), 70).",
+   "characters": [
+    {
+     "clip": "Idle_Torch_Loop",
+     "at": [
+      -0.6,
+      0.75
+     ],
+     "facing_deg": 255
+    },
+    {
+     "clip": "Sitting_Idle_Loop",
+     "at": [
+      0.75,
+      -0.25
+     ],
+     "facing_deg": 140
+    },
+    {
+     "clip": "Jog_Fwd_Loop",
+     "at": [
+      -0.35,
+      2.6
+     ],
+     "facing_deg": 290,
+     "travel": 2.4
+    }
+   ],
+   "camera": "35 mm; CAM_START (-2.55,-2.75,1.50) -> CAM_END (-0.95,-3.25,1.30), CAM_AT (0.10,0.35,0.95); 1.69 m lateral track left to right, dropping",
+   "description": "A watchman holds a lantern over the caged grave, a second sits the night out on a chair, and a figure jogs off through the fog behind them.",
+   "staging_notes": "Camera side: left, tracking right. The chair and the seated man are the runner-up's watch-house vigil brought outdoors, so the film keeps one set family and no interior has to be invented from unspecified walls. The jogger starts just off the left edge at 5.5 m, sweeps through dead centre at the still frame and is off the right edge by the cut, covering 5.5 m at 2.4 m/s - he must LEAVE, or a faceless figure in fog reads as a fourth watchman instead of a robber giving up. The standing watchman is 0.69 m off the cage's short axis, outside the bars: a figure inside the mortsafe footprint stands in the middle of the cage. Keep every foreground headstone at least 0.5 m off the camera-aim line - check_sightline() raycasts at start, mid and end and refuses to render a blocked frame, so a stone wiping the lens aborts the shot."
+  },
+  {
+   "id": "shot_10",
+   "beat": 5,
+   "cut_on": "until",
+   "set": "churchyard(seed=2, lamp_at=(-5.50,9.50), statue_at=None, avoid=(0.4,1.2,2.6)) + mortsafe(at=(0.40,1.20), rot_deg=-15)",
+   "dressing": "night(fog=0.018); the same cage and the same chair at (0.75,-0.25), lantern burnt low (its POINT dropped to 30 W). Key flattened and colder than shot_09: key_cold((-4.40,3.20,3.60),(0.40,1.20,0.50), energy=1900, spot_deg=52, size=0.40); fill_cold((3.00,-3.80,2.00),(0.30,0.90,0.50), 60).",
+   "characters": [
+    {
+     "clip": "Sitting_Exit",
+     "at": [
+      0.75,
+      -0.25
+     ],
+     "facing_deg": 205
+    },
+    {
+     "clip": "Idle_Torch_Loop",
+     "at": [
+      -1.05,
+      1.85
+     ],
+     "facing_deg": 150
+    }
+   ],
+   "camera": "32 mm; CAM_START (1.35,-2.35,0.85) -> CAM_END (2.25,-3.35,1.95), CAM_AT (0.70,-0.20,0.90) -> CAM_AT_END (0.55,0.35,0.95); 1.74 m crane up and back off the chair, the fastest move in the film at 1.22 m/s",
+   "description": "The watch stands up off his chair and the vigil is over, the cage left behind him in the fog.",
+   "staging_notes": "Camera side: right, craning back - the only shot that widens, and the fix for v1's dead beat: the empty chair is EARNED by watching the man leave it instead of opening on furniture. Sitting_Exit is a real action on the same chair, in the same spot, as shot_09, so the place and the night are continuous. The aim stays on him and drifts only 0.6 m toward the cage; aiming past him at the cage would put him on the guard ray and abort the render. Key is flattened and pushed colder than the shot before it so the same churchyard reads as later and emptier."
+  },
+  {
+   "id": "shot_11",
+   "beat": 6,
+   "cut_on": "In",
+   "set": "gate_set()",
+   "dressing": "night(world_strength=0.26, fog=0.008, aniso=0.60) - same gate, same wet cobbles as shot_01, but the fog thinned from 0.011 because this is the lawful world. gate_set()'s lamp and its two spots unchanged; place(\"barrel_03\", at=(-1.95,-0.35)) moved left so the right half of the cobbles is bare.",
+   "characters": [
+    {
+     "clip": "Walk_Loop",
+     "at": [
+      -0.95,
+      -0.55
+     ],
+     "facing_deg": 270,
+     "travel": 0.94
+    }
+   ],
+   "camera": "32 mm; CAM_START (-0.55,-2.45,0.90) -> CAM_END (-1.25,-3.95,1.80), CAM_AT (-0.95,-0.55,1.05) -> CAM_AT_END (0.00,0.05,1.65); 1.88 m crane back and up, panning off him onto the shut gate",
+   "description": "A man walks upright across the same cobbles past the shut gate, in no hurry and with nothing to hide.",
+   "staging_notes": "Camera side: left, retreating - the bookend to shot_01: identical set, identical left-to-right crossing, but standing at 0.94 m/s instead of scuttling at 0.6, and the frame opens instead of closing. The register change is the emptiness and the gait, not a costume the asset set does not have. The aim STARTS on him, so check_sightline() treats him as the target and cannot abort on a figure 1.9 m from the lens, then pans to the gate as the camera withdraws and he walks out of the widening frame. The barrel sits 0.94 m off the guard ray. Last frame before the cut is iron and empty stone."
+  },
+  {
+   "id": "shot_12",
+   "beat": 6,
+   "cut_on": "anatomists",
+   "set": "anatomy_room (same build as shot_05)",
+   "dressing": "night(world_strength=0.16, fog=0.007); the slab is the centre of the room now. The hanging light(\"POINT\",(0.30,1.40,2.35),(0.25,1.20,0.60), 380, size=0.25, color=(1.0,0.82,0.55)) is raised so this is the brightest frame in the film; place(\"brass_diya_lantern\", at=(-1.05,0.55)) back in its shot_05 position with its own POINT; fill_cold((0.20,-3.60,2.00),(0.15,1.00,1.00), 45) from the doorway side so the retreat into the dark keeps some shape.",
+   "characters": [
+    {
+     "clip": "Death01",
+     "at": [
+      0.05,
+      1.15
+     ],
+     "facing_deg": 265
+    },
+    {
+     "clip": "Fixing_Kneeling",
+     "at": [
+      0.6,
+      0.55
+     ],
+     "facing_deg": 0
+    },
+    {
+     "clip": "Walk_Formal_Loop",
+     "at": [
+      -0.85,
+      2.25
+     ],
+     "facing_deg": 200,
+     "travel": 0.9
+    }
+   ],
+   "camera": "28 mm; CAM_START (0.55,-0.75,1.15) -> CAM_END (-0.25,-2.65,1.85), CAM_AT (0.05,1.15,0.35); 2.18 m pull back and up, out through the doorway",
+   "description": "A body delivered at the school, the anatomist kneeling to work on it, as the camera backs out of the door until the lit room is a small bright square in the dark.",
+   "staging_notes": "Camera side: right of the subject, retreating through the 2.6 m doorway gap; the guard ray crosses the front wall plane y=-0.40 at x +0.46, +0.10 and -0.07 at the three check stations, all inside the gap, so nothing aborts - this is the exact test the v1 school-behind-the-gate staging failed. Death01 phase=-45 so the body is still from frame 1 and never re-falls; facing 265 lays it along +X clear of the slab, and the kneeler sits 0.5 m to its south facing 0, beside the torso rather than inside it. The assistant walks out at 0.9 m/s and is gone before the last word. Hold the final frame about 0.7 s past 'died': a lit doorway with nobody outside it is the trade ending."
+  }
+ ],
+ "changes_made": [
+  "Hook rewritten to front-load the claim: 'Stealing' is word one and 'barely a crime' lands 2.6 s earlier than the winner's 'In Georgian England...' opening, which the story lens flagged as byte-identical to v1 and therefore untested against the one thing that decides retention.",
+  "Cut rhythm de-metronomed: shots per sentence are 2/2/3/1/2/2 instead of two-per-sentence at word 1 and word 7-9, with durations 1.43, 1.71, 1.71, 1.43, 1.43, 1.43, 1.43, 2.29, 2.29, 1.43, 2.00, 2.29 s (73 words at 210 wpm = 3.5 words/s, ~22 s total, every cut inside the 1.4-2.3 s band).",
+  "Beat 3 now gets three shots, so 'sent' never cuts to men digging: the money handover on 'Anatomy', the room holding a single body on 'hangman' (the hangman's shortfall shown as empty floor, the fact that had no image in either draft), then the diggers on 'men'.",
+  "Grafted the runner-up's strongest structural idea, the bright interior against dark exteriors, and used it three times (shots 05, 06, 12): it is what makes the money beat, the shortfall and the 1832 turn legible, and it is where the film ends.",
+  "Grafted the runner-up's chair-and-vigil idea but staged it in the churchyard instead of an invented watch-house interior with no wall coordinates, keeping one set family and continuity of the same chair in shots 09 and 10.",
+  "Interact is now used exactly once, for payment. The winner had one looping reach doing four different jobs; robbing a corpse became Fixing_Kneeling, the padlock became the camera's aim landing on it, and the anatomist receiving became Fixing_Kneeling over a body.",
+  "Every character position re-solved against the real frustum: camera() never sets sensor_fit and the PS1 pass renders 320x569, so 36 mm maps to the HEIGHT and the horizontal half-angle is only 19.9 deg at 28 mm, 16.1 at 35 and 14.2 at 40. Ten of the winner's 26 placements were outside frame; all 30 here are inside for the whole shot, with two deliberate exceptions (shot_02's man entering, shot_09's jogger exiting).",
+  "Manifest ids corrected to barrel_03, brass_diya_lantern, marble_bust_01, dining_chair_02: place() does a bare dict lookup, so nine of the winner's shots would have raised KeyError before a frame existed.",
+  "The marble bust is scaled 2.2 and stands on the floor instead of on a box plinth - place() has no z argument, which PROJECT-3D.md already records as a crash the model hit once.",
+  "The anatomy school is a standalone room, not built behind gate_set()'s closed gate: the winner's shots 5 and 12 crossed the gate plane at 3.38 m against check_sightline()'s 3.42 m abort threshold. The new room has a 2.6 m doorway and the guard ray passes through the gap at all three stations in both room shots (verified numerically).",
+  "Every claimed warm pool is a real light now: place() emits nothing and Idle_Torch_Loop carries no torch mesh, so each lantern prop is paired with a POINT at the right height, and shot_04's backlit lift has no front key at all.",
+  "Characters kept off the dug-grave footprint and off the mortsafe slab. character() grounds feet at z=0 and does not follow terrain, so a figure inside open_grave's depression floats over the hole and one on the cage slab stands inside the bars; every placement was checked against the pit and cage transforms (all clear, radius 1.31 to 3.79 against the 1.15 cutoff).",
+  "mortsafe and fresh_grave no longer share coordinates, which in the winner would have driven a 0.16 m cage slab through an earth mound.",
+  "night() is declared in every shot: reset() uses use_empty=True, so a shot that omits it renders with no world and no fog.",
+  "v1's dead beat replaced: instead of opening on an empty chair, the watchman stands up off it with Sitting_Exit and leaves, so the emptiness is earned by an action and the quietest shot still has a human doing something.",
+  "The payoff syncs to its word - 'anatomists' cuts to the anatomist - which the runner-up inverted, while the closing pull-back still gets 2.29 s plus a 0.7 s hold for 'and the trade died'.",
+  "The bookend is kept but re-staged: shot_11 is shot_01's set and shot_01's left-to-right crossing, upright instead of crouched, with the aim starting on the walker so the sightline guard cannot abort on a figure close to the lens.",
+  "Death01 is phased past its fall (phase=-45 of 58 frames) everywhere it appears, so no corpse stands up and dies again mid-shot, and every clip that needs to start mid-action carries a phase (Fixing_Kneeling -60, PickUp_Table -10).",
+  "Camera sides alternate with no repeat across all eleven cuts (front, right, left, front, right, left, front, right, left, right, left, right) and every move is 1.00-2.18 m at 0.66-1.22 m/s, inside the toolkit's 0.3-2 m per 2 s envelope."
+ ]
+}
